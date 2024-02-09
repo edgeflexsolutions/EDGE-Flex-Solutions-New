@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color-dark: #151C35;
+    --color-secodary-dark: #464C70;
+    --color-primary: #EE709D;
+    --color-text: #FFFFFF; /* Change text color to white */
+    --color-light: #EBEBFB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Change background color to black */
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: orange; /* Change heading colors to orange */
+}
+
+.container{
+    height: 100vh; /* Change to occupy full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    max-width: 987px;
+    width: 100%;
+    background-color: transparent; /* Remove black background */
+    text-align: center;
+    border-radius: 8px;
+    padding: 4em 0;
+    border: 2px solid orange; /* Change border color to orange */
+}
+
+.text-light{
+    color: orange; /* Change text color to white */
+}
+.text-light1{
+    color: white;
+
+}
+
+.swiper {
+    width: 600px;
+    height: auto;
+}
+
+.swiper .swiper-slide .flex{
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper .swiper-slide .comments{
+    background-color: orange; /* Change background color to orange */
+    padding: 1.5em 2em;
+    width: 50%;
+    border-radius: 5px;
+    font-size: .9em;
+    position: relative;
+}
+
+.swiper .swiper-slide .comments::after{
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid orange; /* Change border color to orange */
+    z-index: -99;
+}
+
+.swiper .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.swiper .swiper-slide .profile img {
+    width: 100%; /* Adjust image size */
+    max-width: 200px; /* Set maximum width if needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    border: 5px solid orange;
+    margin: 10px 0;
+}
+
+.swiper .profile > a{
+    text-decoration: none;
+    color: white; /* Change text color to white */
+}
+
+.swiper .profile > span{
+    color: var(--color-text);
+    font-size: .8em;
+}
+
+.swiper .swiper-button-prev, .swiper-button-next{
+    color: var(--color-text);
+    display: none;
+}
+
+.swiper-pagination {
+    color: white; /* Change color to white */
+}
+
+.swiper-pagination-bullet {
+    background-color: white; /* Change color of the dots to white */
+}
+
+@media (min-width: 320px) {
+    .board{
+        width: auto;
+    }
+
+    .swiper {
+        width: 320px;
+    }
+
+    .board > h1, p{
+        padding: 0 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .board{
+        width: 100%;
+    }
+
+    .swiper {
+        width: 600px;
+    }
+
+    .swiper .swiper-button-prev, .swiper-button-next{
+        display: initial;
+    }
+}
